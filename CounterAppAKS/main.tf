@@ -13,7 +13,7 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "rg-01" {
+resource "azurerm_resource_group" "rg-01-westeurope" {
   name     = var.resource_group_name
   location = "westeurope"
 }
