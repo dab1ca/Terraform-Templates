@@ -83,6 +83,6 @@ resource "azurerm_app_service_connection" "rg-01-westeurope" {
   app_service_id     = azurerm_windows_web_app.rg-01-westeurope.id
   target_resource_id = azurerm_mssql_database.rg-01-westeurope.id
   authentication {
-    type = "systemAssignedIdentity"
+    type = "secret"
   }
 }
