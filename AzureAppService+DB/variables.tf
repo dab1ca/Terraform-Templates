@@ -19,3 +19,6 @@ variable "sql_database_name" {
 variable "sql_server_password" {
   default = "Taino_Obi4am_G@lena"
 }
+variable "connection_name" {
+  default = "simple-app-asp_msql-connection"
+}

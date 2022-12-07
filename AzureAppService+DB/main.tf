@@ -37,7 +37,7 @@ resource "azurerm_windows_web_app" "rg-01-westeurope" {
 
     application_stack {
       current_stack     = "dotnet"
-      dotnet_version    = "v7.0"
+      dotnet_version    = "v6.0"
     }
   }
 }
@@ -75,4 +75,14 @@ resource "azurerm_mssql_database" "rg-01-westeurope" {
   read_scale     = true
   sku_name       = "S0"
   zone_redundant = true
+}
+
+
+resource "azurerm_app_service_connection" "rg-01-westeurope" {
+  name               = var.connection_name
+  app_service_id     = azurerm_windows_web_app.rg-01-westeurope.id
+  target_resource_id = azurerm_mssql_database.rg-01-westeurope.id
+  authentication {
+    type = "systemAssignedIdentity"
+  }
 }
