@@ -36,7 +36,7 @@ resource "azurerm_windows_web_app" "rg-01-westeurope" {
     always_on         = "false"
 
     application_stack {
-      current_stack     = "dotnetcore"
+      current_stack     = "dotnet"
       dotnet_version    = "v7.0"
     }
   }
