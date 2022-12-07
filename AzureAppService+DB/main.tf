@@ -32,13 +32,13 @@ resource "azurerm_windows_web_app" "rg-01-westeurope" {
   location            = azurerm_resource_group.rg-01-westeurope.location
   service_plan_id     = azurerm_resource_group.rg-01-westeurope.id
   
-  site_config         = {
-    "always_on"         = "false"
+  site_config {
+    always_on         = "false"
   }
   
-  application_stack   = {
-    "current_stack"     = "dotnetcore"
-    "dotnet_version"    = "v7.0"
+  application_stack {
+    current_stack     = "dotnetcore"
+    dotnet_version    = "v7.0"
   }
 }
 
