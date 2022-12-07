@@ -34,11 +34,11 @@ resource "azurerm_windows_web_app" "rg-01-westeurope" {
   
   site_config {
     always_on         = "false"
-  }
-  
-  application_stack {
-    current_stack     = "dotnetcore"
-    dotnet_version    = "v7.0"
+
+    application_stack {
+      current_stack     = "dotnetcore"
+      dotnet_version    = "v7.0"
+    }
   }
 }
 
