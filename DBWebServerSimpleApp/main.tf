@@ -145,6 +145,7 @@ resource "azurerm_linux_virtual_machine" "rg-01-uksouth" {
   }
 }
 
+
 resource "azurerm_linux_virtual_machine" "rg-01-uksouth-db" {
   name                            = var.db_vm_name
   resource_group_name             = azurerm_resource_group.rg-01-uksouth.name
