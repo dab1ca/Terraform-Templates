@@ -95,7 +95,8 @@ resource "azurerm_network_interface" "rg-01-uksouth" {
   ip_configuration {
     name                          = "internal"
     subnet_id                     = azurerm_subnet.rg-01-uksouth.id
-    private_ip_address_allocation = "Dynamic"
+    private_ip_address_allocation = "Static"
+    private_ip_address            = "10.21.0.100"
     public_ip_address_id          = azurerm_public_ip.rg-01-uksouth.id
   }
 }
@@ -115,7 +116,8 @@ resource "azurerm_network_interface" "rg-01-uksouth-db" {
   ip_configuration {
     name                          = "internal"
     subnet_id                     = azurerm_subnet.rg-01-uksouth.id
-    private_ip_address_allocation = "Dynamic"
+    private_ip_address_allocation = "Static"
+    private_ip_address            = "10.21.0.101"
     public_ip_address_id          = azurerm_public_ip.rg-01-uksouth-db.id
   }
 }
