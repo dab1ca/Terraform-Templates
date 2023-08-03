@@ -17,7 +17,7 @@ variable "sql_database_name" {
   default = "simple-app-mssqldatabase-westeurope"
 }
 variable "sql_server_password" {
-  default = "Taino_Obi4am_G@lena"
+  default = ""
 }
 variable "connection_name" {
   default = "simple-app-asp_msql-connection"
